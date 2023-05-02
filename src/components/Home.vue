@@ -1,0 +1,152 @@
+<template>
+  <div>
+    <nav class="navbar">
+      <a href="#" class="logo">Medunfte</a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">the abyssal project</a></li>
+          <li><a href="#">medunfte nft collection</a></li>
+          <li><a href="#">offf barcelona 2023</a></li>
+          <li>
+            <router-link to="/french/">français</router-link>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <img src="img/menu-btn.png" alt="Menu hamburger" class="menu-hamburger"> -->
+      <div class="menu-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <body>
+      <header>
+        <h1>Medunfte</h1>
+        <button>Discover the collection</button>
+      </header>
+
+      <span class="waves"></span>
+
+      <!-- SECTION PRESENTATION PROJET  -->
+
+      <section class="offf" v-for="texte in liste" :key="texte.id">
+        <h1>{{ texte.acf.title }}</h1>
+        <h2>{{ texte.acf.subtitle }}</h2>
+        <div class="column">
+          <div class="subcolumn">
+            <p>{{ texte.acf.paragraph }}</p>
+            <div class="button">
+              <a href="https://www.offf.barcelona/">OFFF
+                website
+              </a>
+            </div>
+          </div>
+          <div class="subcolumn">
+            <img :src="texte.acf.photo" alt="Festival OFFF" class="photos">
+          </div>
+        </div>
+      </section>
+
+      <span class="waves2"></span>
+
+      <!-- SECTION MEDUNFTE -->
+      <section>
+        <h1>Medunfte</h1>
+        <h2>Part of the Abyssal NFT Collection</h2>
+
+        <h3>colors</h3>
+        <div class="color-buttons">
+          <button>Classic</button>
+          <button>Night mode</button>
+          <button>Neon Pink</button>
+          <button>Pink</button>
+        </div>
+
+        <!--  SLIDER -->
+
+        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+          slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+          coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" autoplay-delay="2500"
+          autoplay-disable-on-interaction="false">
+          <swiper-slide v-for="nft in nft" :key="nft.id">
+            <img :src="nft.acf.photo" :alt="nft.acf.id"/>
+          </swiper-slide>
+        </swiper-container>
+
+        <span class="waves"></span>
+
+      </section>
+
+      <!-- SECTION OFFF -->
+    </body>
+  </div>
+</template>
+
+<script>
+
+import param from '@/param/param'
+
+export default {
+  name: 'Home',
+  data() {
+    return {
+      liste: [],
+      nft: []
+    }
+  },
+  created() {
+    axios.get(param.host + "texte").then(response => {
+      console.log("Reponse", response);
+      this.liste = response.data;
+    })
+      .catch(error => console.log(error))
+  },
+
+  async mounted() {
+    axios.get(param.host + "nft").then(response => {
+      console.log("NFT Reponse", response);
+      this.nft = response.data;
+    })
+      .catch(error => console.log(error))
+      const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    });
+
+    menuHamburger.addEventListener('click',()=>{
+    menuHamburger.classList.toggle('open')
+    });
+
+    const swiper = new Swiper('.swiper', {
+// Optional parameters
+direction: 'horizontal',
+loop: true,
+
+// If we need pagination
+pagination: {
+el: '.swiper-pagination',
+},
+
+// Navigation arrows
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
+},
+
+// And if we need scrollbar
+scrollbar: {
+el: '.swiper-scrollbar',
+},
+});
+  }
+}
+
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped></style>

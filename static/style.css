@@ -1,0 +1,399 @@
+/* COULEURS */
+/* TYPOGRAPHIES */
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Manrope:wght@200;300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #1e1674;
+  color: #d1d5f4;
+}
+
+a,
+.nav-links ul li a {
+  color: #d1d5f4;
+}
+a:hover,
+.nav-links ul li a:hover {
+  color: #dd10c0;
+}
+
+button {
+  font-size: 100%;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  border: white solid 1px;
+  border-radius: 1.5em;
+  padding: 0.4em 1em;
+  background: none;
+  color: white;
+}
+button:hover {
+  border: solid #dd10c0 1px;
+  color: #dd10c0;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../static/img/background.svg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+header h1 {
+  margin: 1em;
+  font-size: 3em;
+  color: #ffeffd;
+  animation: flicker 3s linear infinite;
+  text-shadow: 1px 0px 4px #d1d5f4, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+.navbar {
+  position: absolute;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  color: #d1d5f4;
+}
+.navbar a {
+  color: #d1d5f4;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+.navbar ul {
+  font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  display: flex;
+}
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.menu-hamburger {
+  display: none;
+  width: 35px;
+}
+
+@media screen and (max-width: 940px) {
+  .navbar {
+    padding: 0;
+  }
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .nav-links {
+    position: absolute;
+    background-color: rgba(24, 56, 222, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-hamburger {
+    display: block;
+    top: 25px;
+    position: absolute;
+    right: 25px;
+    z-index: 2;
+  }
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.5em;
+    padding: 0.3em;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*     section .color-buttons {
+      flex-direction: column;
+  } */
+  section .color-buttons button {
+    margin-bottom: 1em;
+    width: 80%;
+  }
+}
+.mobile-menu {
+  margin-left: 0;
+}
+
+h1 {
+  font-family: "Bruno Ace", cursive;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+h2,
+p,
+.button,
+a,
+h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  text-transform: lowercase;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  border: solid white 1px;
+  padding: 0.3em;
+  border-radius: 100px;
+  /* width: 30%; */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.2em;
+}
+
+button:hover {
+  border: solid #dd10c0 1px;
+  color: #dd10c0;
+}
+
+p {
+  font-weight: 100;
+  text-transform: lowercase;
+}
+
+section .color-buttons {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section .color-buttons button {
+  width: 16em;
+  margin: 0.2em;
+}
+section .color-buttons button:active {
+  background-color: #d1d5f4;
+  color: #1e1674;
+  border: none;
+}
+
+body > section:nth-child(4) {
+  background-color: #15179D;
+  text-align: left;
+}
+
+body > section:nth-child(4) > div.column {
+  flex-direction: row-reverse;
+}
+
+section,
+footer {
+  padding: 1.5em;
+}
+
+footer {
+  background-color: #1838de;
+  margin-top: 1em;
+}
+footer .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
+}
+footer .flex p {
+  display: flex;
+  align-items: center;
+}
+footer .flex .mdftlogo {
+  width: 2em;
+  margin-right: 5px;
+}
+footer .flex .websites img {
+  width: 3em;
+}
+
+/* MENU HAMBURGER  */
+.menu-hamburger {
+  width: 40px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.menu-hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #d1d5f4;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.menu-hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.menu-hamburger span:nth-child(2),
+.menu-hamburger span:nth-child(3) {
+  top: 15px;
+}
+
+.menu-hamburger span:nth-child(4) {
+  top: 30px;
+}
+
+.menu-hamburger.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menu-hamburger.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu-hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu-hamburger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/* SECTIONS */
+section h1 {
+  color: #ffeffd;
+  font-size: 2em;
+  margin: 0.3em;
+  animation: flicker 3s linear infinite;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 4px #d1d5f4, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+}
+
+.abyssal,
+.offf {
+  text-align: right;
+}
+
+.abyssal,
+section {
+  position: relative;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+.column .subcolumn:nth-child(1) {
+  width: 60%;
+}
+.column .subcolumn:nth-child(1) p {
+  text-align: left;
+}
+.column .subcolumn:nth-child(2) {
+  width: 40%;
+}
+.column .subcolumn:nth-child(2) img {
+  width: 85%;
+}
+.column .subcolumn:nth-child(2) img:hover {
+  transform: scale(1.1);
+  animation: scale ease-in-out 0.5s;
+}
+
+/* WAVES */
+.waves,
+.waves2 {
+  background-image: url(../static/img/waves.png);
+  background-size: cover;
+  width: 18em;
+  height: 8em;
+  position: absolute;
+  opacity: 40%;
+}
+
+.waves {
+  right: 0;
+}
+
+.waves2 {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+/* SLIDER  */
+swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 30em;
+}
+
+swiper-container > swiper-slide.swiper-slide-visible.swiper-slide-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  swiper-slide img {
+    width: 18em;
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: #bfadad !important;
+}/*# sourceMappingURL=style.css.map */

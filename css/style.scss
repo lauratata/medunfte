@@ -1,0 +1,434 @@
+/* COULEURS */
+$background-color: #1e1674;
+$pink: #dd10c0;
+$purple: #d1d5f4;
+$footer: #1838de;
+
+/* TYPOGRAPHIES */
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Manrope:wght@200;300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+$title: "Bruno Ace", cursive;
+$p: "Manrope", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: $background-color;
+    color: $purple;
+}
+
+a,
+.nav-links ul li a {
+    color: $purple;
+    &:hover {
+        color: $pink;
+    }
+}
+
+button {
+    font-size: 100%;
+    text-transform: uppercase;
+    font-family: $p;
+    border: white solid 1px;
+    border-radius: 1.5em;
+    padding: 0.4em 1em;
+    background: none;
+    color: white;
+    &:hover {
+        border: solid $pink 1px;
+        color: $pink;
+    }
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/background.svg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    & h1 {
+        margin: 1em;
+        font-size: 3em;
+        color: #ffeffd;
+        animation: flicker 3s linear infinite;
+        text-shadow: 1px 0px 4px $purple, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca,
+            2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+    }
+}
+
+@keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: 0.99;
+    }
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+.navbar {
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: $purple;
+    & a {
+        color: $purple;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 1.2em;
+    }
+    & ul {
+        font-family: $p;
+        font-weight: 100;
+        display: flex;
+    }
+    & .nav-links ul li {
+        margin: 0 25px;
+    }
+}
+
+.menu-hamburger {
+    display: none;
+    width: 35px;
+}
+
+@media screen and (max-width: 940px) {
+    .navbar {
+        padding: 0;
+    }
+    .logo {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    .nav-links {
+        position: absolute;
+        background-color: rgba($color: $footer, $alpha: 0.8);
+        backdrop-filter: blur(5px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease-in-out;
+        z-index: 1;
+    }
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-hamburger {
+        display: block;
+        top: 25px;
+        position: absolute;
+        right: 25px;
+        z-index: 2;
+    }
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.5em;
+        padding: 0.3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /*     section .color-buttons {
+        flex-direction: column;
+    } */
+    section .color-buttons button {
+        margin-bottom: 1em;
+        width: 80%;
+    }
+}
+
+.mobile-menu {
+    margin-left: 0;
+}
+
+h1 {
+    font-family: $title;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h2,
+p,
+.button,
+a,
+h3 {
+    font-family: $p;
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+button {
+    cursor: pointer;
+}
+
+.button {
+    border: solid white 1px;
+    padding: 0.3em;
+    border-radius: 100px;
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+}
+button:hover {
+    border: solid $pink 1px;
+    color: $pink;
+}
+
+p {
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+section .color-buttons {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    & button {
+        width: 16em;
+        margin: 0.2em;
+        &:active {
+            background-color: $purple;
+            color: $background-color;
+            border: none;
+        }
+    }
+}
+
+section,
+footer {
+    padding: 1.5em;
+}
+
+footer {
+    background-color: $footer;
+    margin-top: 1em;
+    & .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5em;
+        & p {
+            display: flex;
+            align-items: center;
+        }
+        & .mdftlogo {
+            width: 2em;
+            margin-right: 5px;
+        }
+        & .websites img {
+            width: 3em;
+        }
+    }
+}
+
+/* MENU HAMBURGER  */
+
+.menu-hamburger {
+    width: 40px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    & span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $purple;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+    }
+}
+
+.menu-hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-hamburger span:nth-child(2),
+.menu-hamburger span:nth-child(3) {
+    top: 15px;
+}
+
+.menu-hamburger span:nth-child(4) {
+    top: 30px;
+}
+
+.menu-hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu-hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu-hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.menu-hamburger.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+/* SECTIONS */
+
+section h1 {
+    color: #ffeffd;
+    font-size: 2em;
+    margin: 0.3em;
+    animation: flicker 3s linear infinite;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 4px $purple, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca,
+        2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+}
+
+.abyssal,
+.offf {
+    text-align: right;
+}
+
+.abyssal,
+section {
+    position: relative;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    & .subcolumn:nth-child(1) {
+        width: 60%;
+        & p {
+            text-align: left;
+        }
+    }
+    & .subcolumn:nth-child(2) {
+        width: 40%;
+        & img {
+            width: 85%;
+        }
+        & img:hover {
+            transform: scale(1.1);
+            animation: scale ease-in-out 0.5s;
+        }
+    }
+}
+
+/* WAVES */
+
+.waves,
+.waves2 {
+    background-image: url(../img/waves.png);
+    background-size: cover;
+    width: 18em;
+    height: 8em;
+    position: absolute;
+    opacity: 40%;
+}
+
+.waves {
+    right: 0;
+}
+
+.waves2 {
+    left: 0;
+    transform: scaleX(-1);
+}
+
+/* SLIDER  */
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 30em;
+}
+
+swiper-container > swiper-slide.swiper-slide-visible.swiper-slide-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    swiper-slide img {
+        width: 18em;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #bfadad !important;
+}
