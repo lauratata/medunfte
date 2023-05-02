@@ -72,7 +72,7 @@
           coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" autoplay-delay="2500"
           autoplay-disable-on-interaction="false">
           <swiper-slide v-for="nft in nft" :key="nft.id">
-            <img :src="nft.acf.photo" :alt="nft.acf.id"/>
+            <img :src="nft.acf.photo" :alt="nft.acf.id" />
           </swiper-slide>
         </swiper-container>
 
@@ -111,38 +111,16 @@ export default {
       this.nft = response.data;
     })
       .catch(error => console.log(error))
-      const menuHamburger = document.querySelector(".menu-hamburger");
+    const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
 
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu')
     });
 
-    menuHamburger.addEventListener('click',()=>{
-    menuHamburger.classList.toggle('open')
+    menuHamburger.addEventListener('click', () => {
+      menuHamburger.classList.toggle('open')
     });
-
-    const swiper = new Swiper('.swiper', {
-// Optional parameters
-direction: 'horizontal',
-loop: true,
-
-// If we need pagination
-pagination: {
-el: '.swiper-pagination',
-},
-
-// Navigation arrows
-navigation: {
-nextEl: '.swiper-button-next',
-prevEl: '.swiper-button-prev',
-},
-
-// And if we need scrollbar
-scrollbar: {
-el: '.swiper-scrollbar',
-},
-});
   }
 }
 
