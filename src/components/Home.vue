@@ -67,14 +67,27 @@
 
         <!--  SLIDER -->
 
-        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+        <carousel>
+          <carousel-slide >
+            <img src="https://picsum.photos/id/237/200/300">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://picsum.photos/seed/picsum/200/300">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://picsum.photos/200/300/?blur">
+          </carousel-slide>
+        </carousel>
+
+
+        <!-- <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
           slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
           coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" autoplay-delay="2500"
           autoplay-disable-on-interaction="false">
           <swiper-slide v-for="nft in nft" :key="nft.id">
             <img :src="nft.acf.photo" :alt="nft.acf.id" />
           </swiper-slide>
-        </swiper-container>
+        </swiper-container> -->
 
         <span class="waves"></span>
 
@@ -87,10 +100,16 @@
 
 <script>
 
+import Carousel from './carousel/Carousel.vue'
+import CarouselSlide from './carousel/CarouselSlide.vue'
 import param from '@/param/param'
 
 export default {
   name: 'Home',
+  components: {
+    Carousel,
+    CarouselSlide
+  },
   data() {
     return {
       liste: [],
@@ -99,7 +118,7 @@ export default {
   },
   created() {
     axios.get(param.host + "texte").then(response => {
-      console.log("Reponse", response);
+      /* console.log("Reponse", response); */
       this.liste = response.data;
     })
       .catch(error => console.log(error))
@@ -107,7 +126,7 @@ export default {
 
   async mounted() {
     axios.get(param.host + "nft").then(response => {
-      console.log("NFT Reponse", response);
+      /* console.log("NFT Reponse", response); */
       this.nft = response.data;
     })
       .catch(error => console.log(error))
