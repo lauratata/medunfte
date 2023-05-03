@@ -93,6 +93,11 @@ header h1 {
   width: 35px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (min-width: 940px) {
   .navbar {
     background-color: rgba(234, 234, 234, 0.2);
@@ -244,6 +249,12 @@ footer .flex .mdftlogo {
   width: 2em;
   margin-right: 5px;
 }
+
+.mdftheader {
+  width:1.6em;
+  padding: 0.2em;
+}
+
 footer .flex .websites img {
   width: 3em;
 }
@@ -421,4 +432,6 @@ swiper-container > swiper-slide.swiper-slide-visible.swiper-slide-active {
     flex-direction: row-reverse;
   }
 }
+
+
 /*# sourceMappingURL=style.css.map */

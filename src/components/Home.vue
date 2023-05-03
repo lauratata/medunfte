@@ -1,7 +1,11 @@
 <template>
   <div>
     <nav class="navbar">
-      <a href="#" class="logo">Medunfte</a>
+      <router-link to="/" class="logo">
+        <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/logo.png" alt="Logo Medunfte"
+          class="mdftheader">
+        Medunfte
+      </router-link>
       <div class="nav-links">
         <ul>
           <li><a href="#" v-scroll-to="'.offf'">the abyssal project</a></li>
@@ -70,13 +74,43 @@
 
         <carousel>
           <carousel-slide>
-            <img src="https://picsum.photos/id/237/200/300">
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-300x300.png">
           </carousel-slide>
           <carousel-slide>
-            <img src="https://picsum.photos/seed/picsum/200/300">
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-300x300.png">
           </carousel-slide>
           <carousel-slide>
-            <img src="https://picsum.photos/200/300/?blur">
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-300x300.png">
+          </carousel-slide>
+
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-neon-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-neon-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-neon-300x300.png">
+          </carousel-slide>
+
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-rose-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-rose-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-rose-300x300.png">
+          </carousel-slide>
+
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-nightmode-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-nightmode-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-nightmode-300x300.png">
           </carousel-slide>
         </carousel>
 

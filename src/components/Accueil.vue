@@ -1,7 +1,11 @@
 <template>
   <div>
     <nav class="navbar">
-      <router-link to="/" class="logo">Medunfte</router-link>
+      <router-link to="/french" class="logo">
+        <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/logo.png" alt="Logo Medunfte"
+          class="mdftheader">
+        Medunfte
+      </router-link>
       <div class="nav-links">
         <ul>
           <li><a href="#" v-scroll-to="'.offf'">le projet abyssal</a></li>
@@ -56,7 +60,7 @@
       <!-- SECTION MEDUNFTE -->
       <section>
         <h1>Medunfte</h1>
-        <h2>Part de la collection de nft abyssal</h2>
+        <h2>Partie de la collection de nfts abyssal</h2>
 
         <h3>couleurs</h3>
         <div class="color-buttons">
@@ -67,21 +71,47 @@
         </div>
 
         <!--  SLIDER -->
+        <carousel>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-300x300.png">
+          </carousel-slide>
 
-        <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-          slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-          coverflow-effect-modifier="1" coverflow-effect-slide-shadows="false" autoplay-delay="2500"
-          autoplay-disable-on-interaction="false">
-          <swiper-slide>
-            <img src="img/medunfte.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="img/modern.png" />
-          </swiper-slide>
-          <swiper-slide>
-            <img src="img/steampunk.png" />
-          </swiper-slide>
-        </swiper-container>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-neon-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-neon-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-neon-300x300.png">
+          </carousel-slide>
+
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-rose-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-rose-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-rose-300x300.png">
+          </carousel-slide>
+
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/steampunk-nightmode-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/modern-nightmode-300x300.png">
+          </carousel-slide>
+          <carousel-slide>
+            <img src="https://backmedunfte.laurataormina.fr/wp-content/uploads/2023/05/medunfte-nightmode-300x300.png">
+          </carousel-slide>
+        </carousel>
 
       </section>
 
@@ -94,10 +124,17 @@
 
 <script>
 
+import Carousel from './carousel/Carousel.vue'
+import CarouselSlide from './carousel/CarouselSlide.vue'
+
 import param from '@/param/param'
 
 export default {
   name: 'Accueil',
+  components: {
+    Carousel,
+    CarouselSlide
+  },
   data() {
     return {
       liste: [],
