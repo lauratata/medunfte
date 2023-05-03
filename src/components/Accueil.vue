@@ -62,13 +62,13 @@
         <h1>Medunfte</h1>
         <h2>Partie de la collection de nfts abyssal</h2>
 
-        <h3>couleurs</h3>
+        <!-- <h3>couleurs</h3>
         <div class="color-buttons">
           <button>Classic</button>
           <button>Night mode</button>
           <button>Neon Pink</button>
           <button>Pink</button>
-        </div>
+        </div> -->
 
         <!--  SLIDER -->
         <carousel>

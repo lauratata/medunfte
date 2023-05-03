@@ -62,13 +62,13 @@
         <h1>Medunfte</h1>
         <h2>Part of the Abyssal NFT Collection</h2>
 
-        <h3>colors</h3>
+        <!-- <h3>colors</h3>
         <div class="color-buttons">
           <button>Classic</button>
           <button>Night mode</button>
           <button>Neon Pink</button>
           <button>Pink</button>
-        </div>
+        </div> -->
 
         <!--  SLIDER -->
 
@@ -123,8 +123,6 @@
             <img :src="nft.acf.photo" :alt="nft.acf.id" />
           </swiper-slide>
         </swiper-container> -->
-
-        <span class="waves"></span>
 
       </section>
 
