@@ -1,8 +1,8 @@
 <template>
     <div class=carousel>
         <slot></slot>
-        <button class="carousel__nav carousel__next" @click.prevent="prev"> < </button>
-        <button class="carousel__nav carousel__next" @click.prevent="next"> > </button>
+        <button class="carousel__nav carousel__next" @click.prevent="prev"> &lt; </button>
+        <button class="carousel__nav carousel__next" @click.prevent="next"> &gt; </button>
     </div>
 </template>
 
