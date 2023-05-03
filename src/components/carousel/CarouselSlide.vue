@@ -29,11 +29,11 @@ export default {
 
 <style>
 .slide-right-enter-active {
-    animation: slideRightIn 5s;
+    animation: slideRightIn 2s;
 }
 
 .slide-right-leave-active {
-    animation: slideRightOut 5s;
+    animation: slideRightOut 2s;
     position: absolute;
     top: 0;
     left: 0;
@@ -63,11 +63,11 @@ export default {
 }
 
 .slide-left-enter-active {
-    animation: slideLeftIn 5s;
+    animation: slideLeftIn 2s;
 }
 
 .slide-left-leave-active {
-    animation: slideLeftOut 5s;
+    animation: slideLeftOut 2s;
     position: absolute;
     top: 0;
     left: 0;

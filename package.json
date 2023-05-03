@@ -14,6 +14,7 @@
     "vue": "^2.5.2",
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.20.0",
     "vueperslides": "^2.16.0"
   },
   "devDependencies": {

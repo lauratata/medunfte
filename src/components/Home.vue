@@ -4,9 +4,9 @@
       <a href="#" class="logo">Medunfte</a>
       <div class="nav-links">
         <ul>
-          <li><a href="#">the abyssal project</a></li>
-          <li><a href="#">medunfte nft collection</a></li>
-          <li><a href="#">offf barcelona 2023</a></li>
+          <li><a href="#" v-scroll-to="'.offf'">the abyssal project</a></li>
+          <li><a href="#" v-scroll-to="'.offf'">medunfte nft collection</a></li>
+          <li><a href="#" v-scroll-to="'.offf'">offf barcelona 2023</a></li>
           <li>
             <router-link to="/french/">français</router-link>
           </li>
@@ -25,14 +25,14 @@
     <body>
       <header>
         <h1>Medunfte</h1>
-        <button>Discover the collection</button>
+        <button v-scroll-to="'#scroll2'">Discover the collection</button>
       </header>
 
       <span class="waves"></span>
 
       <!-- SECTION PRESENTATION PROJET  -->
 
-      <section class="offf" v-for="texte in liste" :key="texte.id">
+      <section class="offf" v-for="texte in liste" :key="texte.id" ref="bottom">
         <h1>{{ texte.acf.title }}</h1>
         <h2>{{ texte.acf.subtitle }}</h2>
         <div class="column">
@@ -53,6 +53,7 @@
       <span class="waves2"></span>
 
       <!-- SECTION MEDUNFTE -->
+      <div id="scroll2"></div>
       <section>
         <h1>Medunfte</h1>
         <h2>Part of the Abyssal NFT Collection</h2>
@@ -67,7 +68,7 @@
 
         <!--  SLIDER -->
 
-        <!-- <carousel>
+        <carousel>
           <carousel-slide>
             <img src="https://picsum.photos/id/237/200/300">
           </carousel-slide>
@@ -77,7 +78,7 @@
           <carousel-slide>
             <img src="https://picsum.photos/200/300/?blur">
           </carousel-slide>
-        </carousel> -->
+        </carousel>
 
 
         <!-- <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
@@ -124,7 +125,6 @@ export default {
     })
       .catch(error => console.log(error))
   },
-
   async mounted() {
     axios.get(param.host + "nft").then(response => {
       /* console.log("NFT Reponse", response); */

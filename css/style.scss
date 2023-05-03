@@ -372,6 +372,21 @@ section {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .column {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & .subcolumn:nth-child(1) {
+            width: 85%;
+        }
+        & .subcolumn:nth-child(2) {
+            width: 85%;
+            text-align: center;
+        }
+    }
+}
+
 /* WAVES */
 
 .waves,

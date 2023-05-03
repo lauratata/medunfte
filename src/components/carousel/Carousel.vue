@@ -51,6 +51,7 @@ export default {
 
 .carousel {
     position: relative;
+    text-align: center;
 }
 
 </style>

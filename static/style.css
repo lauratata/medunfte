@@ -77,7 +77,7 @@ header h1 {
   color: #d1d5f4;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .navbar ul {
   font-family: "Manrope", sans-serif;
@@ -91,6 +91,12 @@ header h1 {
 .menu-hamburger {
   display: none;
   width: 35px;
+}
+
+@media screen and (min-width: 940px) {
+  .navbar {
+    background-color: rgba(234, 234, 234, 0.2);
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -213,10 +219,6 @@ section .color-buttons button:active {
 body > section:nth-child(4) {
   background-color: #15179D;
   text-align: left;
-}
-
-body > section:nth-child(4) > div.column {
-  flex-direction: row-reverse;
 }
 
 section,
@@ -396,4 +398,27 @@ swiper-container > swiper-slide.swiper-slide-visible.swiper-slide-active {
 }
 .swiper-pagination-bullet-active {
   background-color: #bfadad !important;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (max-width: 600px) {
+  .column, body > section:nth-child(4) > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .column .subcolumn:nth-child(1) {
+    width: 85%;
+    text-align: center;
+  }
+  .column .subcolumn:nth-child(2) {
+    width: 85%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body > section:nth-child(4) > div.column {
+    flex-direction: row-reverse;
+  }
+}
+/*# sourceMappingURL=style.css.map */
