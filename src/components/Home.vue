@@ -67,8 +67,8 @@
 
         <!--  SLIDER -->
 
-        <carousel>
-          <carousel-slide >
+        <!-- <carousel>
+          <carousel-slide>
             <img src="https://picsum.photos/id/237/200/300">
           </carousel-slide>
           <carousel-slide>
@@ -77,7 +77,7 @@
           <carousel-slide>
             <img src="https://picsum.photos/200/300/?blur">
           </carousel-slide>
-        </carousel>
+        </carousel> -->
 
 
         <!-- <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
@@ -102,6 +102,7 @@
 
 import Carousel from './carousel/Carousel.vue'
 import CarouselSlide from './carousel/CarouselSlide.vue'
+
 import param from '@/param/param'
 
 export default {
